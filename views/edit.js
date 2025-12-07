@@ -1,0 +1,8 @@
+const createEditFormTemplate = (book) => /*html*/ `
+                   <form hx-put="/books/${book.id}" hx-target="closest li" hx-swap="outerHTML">
+                        <input type="text" name="title" placeholder="Title" required value="${book.title}"/>
+                        <input type="text" name="author" placeholder="Author" required value="${book.author}"/>
+                        <button // hx-on:click="console.log('new book added',event)">Confirm</button>
+                    </form>`;
+
+export default createEditFormTemplate;
